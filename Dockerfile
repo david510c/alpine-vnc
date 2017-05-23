@@ -11,7 +11,7 @@ RUN apk add xvfb openbox xfce4-terminal supervisor sudo \
 && echo "alpine    ALL=(ALL) ALL" >> /etc/sudoers \
 && rm -rf /apk /tmp/* /var/cache/apk/*
 
-RUN npm install -g angular-no-vnc
+RUN npm install -g https://github.com/rootStar-lock/angular-noVNC/tarball/master
 RUN websockify --web=.. 8080 localhost:5900
 
 ADD etc /etc
