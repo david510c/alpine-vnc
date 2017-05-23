@@ -12,7 +12,7 @@ RUN apk add xvfb openbox xfce4-terminal supervisor sudo \
 && rm -rf /apk /tmp/* /var/cache/apk/*
 
 RUN x11vnc -display :0 -N -forever
-RUN npm install -g https://github.com/rootStar-lock/angular-noVNC/tarball/master
+RUN npm install -g angular-no-vnc
 RUN websockify --web=.. 8080 localhost:5900
 
 ADD etc /etc
